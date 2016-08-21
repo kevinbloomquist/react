@@ -5,6 +5,10 @@ Market: SF
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!-- 2:30 5 minutes -->
+
+<!--Hook: So at this point, you're familiar with Angular which is one of many front-end frameworks.  Today, we'll talk about React, another incredibly popular front-end framework maintained mainly by Facebook. As Taylor at Spruce mentioned over the weekend, it is a tool that does a lot of front-end work for you so you don't have to reinvent the wheel.  For those interested in putting it into your project 4 after this class, please follow up with me.-->
+
 #ReactJS
 
 ### Why is this important?
@@ -27,6 +31,8 @@ React is a library that Facebook invented to help build custom HTML elements. Re
 
 * **Write** client-side applications in JavaScript
 * **Know** Gulp as a build tool
+
+<!--2:35 5 minutes -->
 
 ##From Docs
 
@@ -58,6 +64,8 @@ var output = React.createElement(
 );
 ```
 
+<!--2:40 5 minutes -->
+
 ## Setup
 
 ###JSX Syntax in Sublime
@@ -75,6 +83,8 @@ To view JSX appropriately in Sublime:
 * Look at the `readme.md` file at the root of the application to see how to get it setup.
 
 <!--Half-mast-->
+
+<!--2:45 10 minutes -->
 
 ## React Components
 
@@ -218,6 +228,7 @@ ReactDOM.render(
 )
 ```
 
+<!--2:55 5 minutes -->
 <!-- Turn over to devs -->
 
 ### Challenge: Greet the day!
@@ -245,6 +256,7 @@ ReactDOM.render(
 
 -->
 
+<!--3:00 5 minutes -->
 <!-- Half-mast -->
 
 ###Variable Props
@@ -307,12 +319,15 @@ class ProfilePic extends React.Component {
 
 ```
 
+<!-- 3:05 5 minutes -->
 <!-- Turn over to devs -->
 
 ###Challenge: Mr Cat's Profile
 
 * Pass an `id` into the `ProfilePic` component that is `"mr-cat"`
 * Pass a `p` child, below the `h3`, into the `ProfilePic` component with the class `"bio"` that contains a brief description of this kitty.
+
+<!-- 3:10 5 minutes -->
 
 ##Exercise: A Blog Post
 
@@ -348,6 +363,8 @@ ReactDOM.render(
 ```
 
 -->
+
+<!-- 3:15 5 minutes -->
 
 What if we wanted to add an array of comments to the post?
 
@@ -411,6 +428,8 @@ ReactDOM.render(
 
 * Let's reference a comment using an embedded `<Comment/>` component inside of PostView's render method.
 
+<!--3:20 10 minutes -->
+
 ### Challenge: Add Embedded Comments To Blog
 
 1. Create a `Comment` component in the same way we did for `Post`.
@@ -419,8 +438,7 @@ ReactDOM.render(
 2. Amend your `Post`'s render method so that its return value generates as many `<Comment/>` elements as there are comments.
 * Make sure to pass in the body as an argument to the component.
 
-<details>
-<summary>Example solution</summary>
+<!-- Example solution
 
 ```js
 class Post extends React.Component {
@@ -449,7 +467,9 @@ class Comment extends React.Component {
   }
 }
 ```
-</details>
+-->
+
+<!--3:30 10 minutes -->
 
 ## State
 
@@ -519,6 +539,8 @@ Whenever we run `.setState`, our component runs a **diff** between the current D
   * We **do not** re-render the entire component like we have been in class.
   * This is one of React's core advantages
 
+<!-- 3:40 5 minutes -->
+
 ### Challenge: Count to 10
 
 After 10 clicks, the user should see the counter reset to 1.
@@ -552,6 +574,8 @@ const MoodTracker = React.createClass({
 
 -->
 
+<!-- 3:45 5 minutes -->
+
 ## Challenge: I Like!
 
 Let's create a state for our earlier blog example. We want to be able to edit the body of our post. Tip: update the component to the `React.createClass` syntax.
@@ -563,10 +587,13 @@ Let's create a state for our earlier blog example. We want to be able to edit th
 
 <!-- Checkout the `solution` branch for solutions.-->
 
+<!--3:50 5 minutes -->
+
 ## What's Next?
 
 * Getting user input with [forms](https://facebook.github.io/react/docs/forms.html)
 * Triggering [events](https://facebook.github.io/react/tips/dom-event-listeners.html)
+* A more [complicated example](http://codepen.io/ZebGirouard/pen/eZqjLd) by a GA instructor
 
 ## Questions / Closing
 
