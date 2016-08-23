@@ -173,6 +173,8 @@ ReactDOM.render(
 
 >Note: It's a good idea to use [`"use strict"`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) as it is a restricted variant of JavaScript that eliminates some of JavaScript's silent errors by changing them to throw errors.
 
+<!-- Let devs do this now with their partner's name -->
+
 ### Mad Props
 
 Our `Hello` component isn't too helpful. Let's make it more interesting.
