@@ -5,9 +5,9 @@ Market: SF
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-<!-- 2:30 5 minutes -->
+<!-- 9:00 5 minutes -->
 
-<!--Hook: So at this point, you're familiar with Angular which is one of many front-end frameworks.  Today, we'll talk about React, another incredibly popular front-end framework maintained mainly by Facebook. As Taylor at Spruce mentioned over the weekend, it is a tool that does a lot of front-end work for you so you don't have to reinvent the wheel.  For those interested in putting it into your project 4 after this class, please follow up with me.-->
+<!--Hook: So at this point, you're familiar with Angular which is one of many front-end frameworks.  Today, we'll talk about React, another incredibly popular front-end framework maintained mainly by Facebook. It fits with the philosophy that Taylor at Spruce mentioned over the weekend: it is a tool that does a lot of front-end work for you so you don't have to reinvent the wheel.  For those interested in putting it into your project 4 after this class, please follow up with me.-->
 
 #ReactJS
 
@@ -32,7 +32,7 @@ React is a library that Facebook invented to help build custom HTML elements. Re
 * **Write** client-side applications in JavaScript
 * **Know** Gulp as a build tool
 
-<!--2:35 5 minutes -->
+<!--9:05 5 minutes -->
 
 ##From Docs
 
@@ -64,7 +64,7 @@ var output = React.createElement(
 );
 ```
 
-<!--2:40 5 minutes -->
+<!--9:10 5 minutes -->
 
 ## Setup
 
@@ -84,7 +84,7 @@ To view JSX appropriately in Sublime:
 
 <!--Half-mast-->
 
-<!--2:45 10 minutes -->
+<!--9:15 10 minutes -->
 
 ## React Components
 
@@ -228,7 +228,7 @@ ReactDOM.render(
 )
 ```
 
-<!--2:55 5 minutes -->
+<!--9:25 5 minutes -->
 <!-- Turn over to devs -->
 
 ### Challenge: Greet the day!
@@ -256,7 +256,7 @@ ReactDOM.render(
 
 -->
 
-<!--3:00 5 minutes -->
+<!--9:30 5 minutes -->
 <!-- Half-mast -->
 
 ###Variable Props
@@ -319,7 +319,7 @@ class ProfilePic extends React.Component {
 
 ```
 
-<!-- 3:05 5 minutes -->
+<!-- 9:35 5 minutes -->
 <!-- Turn over to devs -->
 
 ###Challenge: Mr Cat's Profile
@@ -327,7 +327,7 @@ class ProfilePic extends React.Component {
 * Pass an `id` into the `ProfilePic` component that is `"mr-cat"`
 * Pass a `p` child, below the `h3`, into the `ProfilePic` component with the class `"bio"` that contains a brief description of this kitty.
 
-<!-- 3:10 5 minutes -->
+<!-- 9:40 5 minutes -->
 
 ##Exercise: A Blog Post
 
@@ -364,7 +364,7 @@ ReactDOM.render(
 
 -->
 
-<!-- 3:15 5 minutes -->
+<!-- 9:45 5 minutes -->
 
 What if we wanted to add an array of comments to the post?
 
@@ -428,7 +428,7 @@ ReactDOM.render(
 
 * Let's reference a comment using an embedded `<Comment/>` component inside of PostView's render method.
 
-<!--3:20 10 minutes -->
+<!--9:50 10 minutes -->
 
 ### Challenge: Add Embedded Comments To Blog
 
@@ -469,7 +469,7 @@ class Comment extends React.Component {
 ```
 -->
 
-<!--3:30 10 minutes -->
+<!--10:00 10 minutes -->
 
 ## State
 
@@ -539,7 +539,7 @@ Whenever we run `.setState`, our component runs a **diff** between the current D
   * We **do not** re-render the entire component like we have been in class.
   * This is one of React's core advantages
 
-<!-- 3:40 5 minutes -->
+<!-- 10:10 5 minutes -->
 
 ### Challenge: Count to 10
 
@@ -574,7 +574,7 @@ const MoodTracker = React.createClass({
 
 -->
 
-<!-- 3:45 5 minutes -->
+<!-- 10:15 5 minutes -->
 
 ## Challenge: I Like!
 
@@ -587,7 +587,7 @@ Let's create a state for our earlier blog example. We want to be able to edit th
 
 <!-- Checkout the `solution` branch for solutions.-->
 
-<!--3:50 5 minutes -->
+<!--10:20 5 minutes -->
 
 ## What's Next?
 
