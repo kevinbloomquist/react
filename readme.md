@@ -3,6 +3,8 @@ Creator: Ilias
 Market: SF
 -->
 
+<!--This timing is ridonculous, may need to eat into Redux lesson a bit -->
+
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
 <!-- 9:00 5 minutes -->
@@ -135,7 +137,7 @@ export default class HelloWorld extends React.Component {
 }
 ```
 
-###The Virtual DOM
+### The Virtual DOM
 
 * Every component has, at minimum, a render method that generates a Virtual DOM node to be added to the actual DOM.
 * A Virtual DOM is just like a regular ol' DOM node, but it's not yet attached to the DOM. Try typing `var photo = new Image` in the console; that `photo` is part of the virtual DOM.
@@ -261,7 +263,7 @@ ReactDOM.render(
 <!--9:30 5 minutes -->
 <!-- Half-mast -->
 
-###Variable Props
+### Variable Props
 
 What if we don't know exactly what props we're going to get but we want to pass them to the element. We can do this with something new in ES6 called a [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator).
 
@@ -290,7 +292,7 @@ ReactDOM.render(
 )
 ```
 
-###Nested Components
+### Nested Components
 
 What if we want to add text just above our Image, but want it also to be wrapped in the anchor tag so it is clickable, like the image?
 
@@ -324,14 +326,14 @@ class ProfilePic extends React.Component {
 <!-- 9:35 5 minutes -->
 <!-- Turn over to devs -->
 
-###Challenge: Mr Cat's Profile
+### Challenge: Mr Cat's Profile
 
 * Pass an `id` into the `ProfilePic` component that is `"mr-cat"`
 * Pass a `p` child, below the `h3`, into the `ProfilePic` component with the class `"bio"` that contains a brief description of this kitty.
 
 <!-- 9:40 5 minutes -->
 
-##Exercise: A Blog Post
+## Exercise: A Blog Post
 
 Let's practice what we've learned so far by building a `Post` component for our blog.
 
