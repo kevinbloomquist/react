@@ -110,7 +110,7 @@ class HelloWorld extends React.Component {
   }
 }
 ```
-From above, we can see that we are creating a new Component class that is inheriting from `React.Component`. It has one function `render`. React expects `render` to be defined as that is the function that will get called when it is being rendered to the DOM. Note we are using ES6's [method definition syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions#Description).
+From above, we can see that we are creating a new Component class that is inheriting from `React.Component`. It has one function - `render`. React expects `render` to be defined as that is the function that will get called when it is being rendered to the DOM. Note that we are using ES6's [method definition syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions#Description).
 
 Don't forget to require `React` and export your new component!
 
