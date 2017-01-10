@@ -7,11 +7,11 @@ Market: SF
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-<!-- 9:00 5 minutes -->
+<!-- 10:35 5 minutes -->
 
 <!--Hook: So at this point, you're familiar with Angular which is one of many front-end frameworks.  Today, we'll talk about React, another incredibly popular front-end framework maintained mainly by Facebook. It fits with the philosophy that Taylor at Spruce mentioned over the weekend: it is a tool that does a lot of front-end work for you so you don't have to reinvent the wheel.  For those interested in putting it into your project 4 after this class, please follow up with me.-->
 
-#ReactJS
+# ReactJS
 
 ### Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
@@ -34,17 +34,17 @@ React is a library that Facebook invented to help build custom HTML elements. Re
 * **Write** client-side applications in JavaScript
 * **Know** Gulp as a build tool
 
-<!--9:05 5 minutes -->
+<!--10:40 5 minutes -->
 
-##From Docs
+## From Docs
 
->We built React to solve one problem: **building large applications with data that changes over time**.
+>- We built React to solve one problem: **building large applications with data that changes over time**.
 
->Many people choose to think of React as the V in MVC.
+>- Many people choose to think of React as the V in MVC.
 
->In fact, with React the only thing you do is build components. Since they're so encapsulated, components make code reuse, testing, and separation of concerns easy.
+>- In fact, with React the only thing you do is build components. Since they're so encapsulated, components make code reuse, testing, and separation of concerns easy.
 
-##JSX
+## JSX
 
 JSX is a JavaScript syntax extension that looks similar to XML that helps represent DOM elements in JavaScript.
 
@@ -66,18 +66,18 @@ var output = React.createElement(
 );
 ```
 
-<!--9:10 5 minutes -->
+<!--10:45 5 minutes -->
 
 ## Setup
 
-###JSX Syntax in Sublime
+### JSX Syntax in Sublime
 
 To view JSX appropriately in Sublime:
 
 * Install the package `babel` in sublime
 * Select syntax `Babel > Javascript (Babel)` 
 
-###Getting Started
+### Getting Started
 
 `cd` into `starter-code`
 
@@ -86,7 +86,7 @@ To view JSX appropriately in Sublime:
 
 <!--Half-mast-->
 
-<!--9:15 10 minutes -->
+<!--10:50 20 minutes -->
 
 ## React Components
 
@@ -112,7 +112,7 @@ class HelloWorld extends React.Component {
 ```
 From above, we can see that we are creating a new Component class that is inheriting from `React.Component`. It has one function - `render`. React expects `render` to be defined as that is the function that will get called when it is being rendered to the DOM. Note that we are using ES6's [method definition syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions#Description).
 
-Don't forget to require `React` and export your new component!
+Don't forget to require `React` and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) your new component!
 
 ```js
 import React from 'react'
@@ -125,21 +125,9 @@ class HelloWorld extends React.Component {
 export default HelloWorld
 ```
 
-It could be refactored to [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) the new class in the same line it is being defined.
-
-```js
-import React from "react"
-
-export default class HelloWorld extends React.Component {
-  render() {
-    return <p>Hello World!</p>
-  }
-}
-```
-
 ### The Virtual DOM
 
-* Every component has, at minimum, a render method that generates a Virtual DOM node to be added to the actual DOM.
+* Every component has, at a minimum, a render method that generates a Virtual DOM node to be added to the actual DOM.
 * A Virtual DOM is just like a regular ol' DOM node, but it's not yet attached to the DOM. Try typing `var photo = new Image` in the console; that `photo` is part of the virtual DOM.
 * For React, the virtual DOM is a staging area for changes that will eventually be implemented.
 * The contents of this node are defined in the method's return statement using JSX.
@@ -175,7 +163,7 @@ ReactDOM.render(
 
 >Note: It's a good idea to use [`"use strict"`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) as it is a restricted variant of JavaScript that eliminates some of JavaScript's silent errors by changing them to throw errors.
 
-<!-- Let devs do this now with their partner's name -->
+<!-- Let devs do this now with their table-partner's name -->
 
 ### Mad Props
 
@@ -186,12 +174,14 @@ Our `Hello` component isn't too helpful. Let's make it more interesting.
 
 ```js
 // update your HelloWorld Component to accept a name prop
-export default class HelloWorld extends React.Component {
+class HelloWorld extends React.Component {
   render() {
     return <p>Hello {this.props.name}!</p>
   }
 }
 ```
+
+<!--Look familiar?  A lot like {{controller.name}} in Angular, right?-->
 
 ```js
 // render it by passing in a `name` prop
@@ -208,6 +198,8 @@ What are `.props`?
 * Properties are immutable and cannot be changed by the element itself, only by a parent.
 * We define properties and pass them in as attributes to the JSX element in our `.render` method.
 
+<!--Look familiar?  Kind of like custom directives with attributes -->
+
 We can create multiple properties for a component.
 
 ```js
@@ -223,7 +215,7 @@ export default class HelloWorld extends React.Component {
 }
 ```
 
->Note, if you have nested html elements in your JSX you have to wrap them in parenthesis.
+>Note, if you have nested html elements in your JSX you have to wrap them in parentheses.
 
 ```js
 ReactDOM.render(
@@ -232,12 +224,12 @@ ReactDOM.render(
 )
 ```
 
-<!--9:25 5 minutes -->
+<!--11:10 15 minutes -->
 <!-- Turn over to devs -->
 
 ### Challenge: Greet the day!
 
-Create a component called `<Greeting/>` that has two props: `timeOfDay` and `object`, such that it's interface would be `<Greeting timeOfDay="night" object="moon">` and it would print out "Goodnight moon" in an `h3`. Append it to a `div` with the `id` `greeting-component`. (Hint: don't forget to create that div in your HTML.)
+Create a component called `<Greeting/>` that has two props: `timeOfDay` and `object`, such that its interface would be `<Greeting timeOfDay="night" object="moon">` and it would print out "Goodnight moon" in an `h3`. Append it to a `div` with the `id` `greeting-component`. (Hint: don't forget to create that div in your HTML.)
 
 <!--Example solution
 
@@ -260,14 +252,14 @@ ReactDOM.render(
 
 -->
 
-<!--9:30 5 minutes -->
+<!--11:25 10 minutes -->
 <!-- Half-mast -->
 
 ### Variable Props
 
-What if we don't know exactly what props we're going to get but we want to pass them to the element. We can do this with something new in ES6 called a [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator).
+What if we don't know exactly what props we're going to get but we want to pass them to the element? We can do this with something new in ES6 called a [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator).
 
-For example lets say we to create `ProfilePic` component that is a clickable image tag and we want to be able to pass in any new props into it.
+For example, let's say we want to create a `ProfilePic` component that is a clickable image tag and we want to be able to pass all our new props into the anchor tag.
 
 ```js
 class ProfilePic extends React.Component {
@@ -323,7 +315,7 @@ class ProfilePic extends React.Component {
 
 ```
 
-<!-- 9:35 5 minutes -->
+<!-- 11:35 5 minutes -->
 <!-- Turn over to devs -->
 
 ### Challenge: Mr Cat's Profile
@@ -331,7 +323,7 @@ class ProfilePic extends React.Component {
 * Pass an `id` into the `ProfilePic` component that is `"mr-cat"`
 * Pass a `p` child, below the `h3`, into the `ProfilePic` component with the class `"bio"` that contains a brief description of this kitty.
 
-<!-- 9:40 5 minutes -->
+<!-- 11:40 10 minutes -->
 
 ## Exercise: A Blog Post
 
@@ -345,8 +337,8 @@ Make and render a custom `<Post/>` component with the attributes `title`, `autho
 class Post extends React.Component {
   render() {
     return (
-      <div class="post">
-        <h2>Hello {this.props.title}</h2>
+      <div className="post">
+        <h2>{this.props.title}</h2>
         <h4>By {this.props.author}</h4>
         <p>{this.props.body}</p>
       </div>
@@ -368,7 +360,7 @@ ReactDOM.render(
 
 -->
 
-<!-- 9:45 5 minutes -->
+<!-- 11:50 10 minutes -->
 
 What if we wanted to add an array of comments to the post?
 
@@ -399,30 +391,18 @@ class Post extends React.Component {
         <h4>By {this.props.author}</h4>
         <p>{this.props.body}</p>
         <h3>Comments</h3>
-          <ul> {
-            this.props.comments.map((comment, index) => {
-              return <li key={index}>{comment}</li>
-            })
-          }</ul>
+        <ul> {
+          this.props.comments.map((comment, index) => {
+            return <li key={index}>{comment}</li>
+          })
+      }</ul>
       </div>
     )
   }
 }
 ```
 
->Note: when iterating through a collection, React needs to put a `key` on each item with a unique index for that collection (otherwise errors will appear). `.map`'s second argument to its callback is the (unique) index, so that works just fine. However, the actual unique database id on each comment would be better.
-
-```js
-ReactDOM.render(
-  <Post
-    title={myPost.title}
-    author={myPost.author}
-    body={myPost.body}
-    comments={myPost.comments}
-  />,
-  document.getElementById("blog-component")
-)
-```
+>Note: when iterating through a collection, React needs to put a `key` on each item with a unique index for that collection (otherwise errors will appear). `.map`'s second argument to its callback is the (unique) index, so that works just fine.
 
 </details>
 
@@ -432,7 +412,7 @@ ReactDOM.render(
 
 * Let's reference a comment using an embedded `<Comment/>` component inside of PostView's render method.
 
-<!--9:50 10 minutes -->
+<!--12:00 15 minutes -->
 
 ### Challenge: Add Embedded Comments To Blog
 
@@ -473,7 +453,7 @@ class Comment extends React.Component {
 ```
 -->
 
-<!--10:00 10 minutes -->
+<!--12:15 10 minutes -->
 
 ## State
 
@@ -489,7 +469,7 @@ We already went over properties.
 
 Let's modify our earlier `HelloWorld` example to be a new `MoodTracker` component. There will be a mood displayed and  eventually a user will click a button to indicate on a scale of 1-10 how much of that mood they are feeling.
 
-Now, let's instead use React's `.createClass` method as opposed to extending standard ES6 classes, as it makes some of this behavior more straightforward.
+We will use React's `.createClass` method as opposed to extending standard ES6 classes, as it makes some of this behavior more straightforward.
 
 ```js
 const MoodTracker = React.createClass({
@@ -543,7 +523,7 @@ Whenever we run `.setState`, our component runs a **diff** between the current D
   * We **do not** re-render the entire component like we have been in class.
   * This is one of React's core advantages
 
-<!-- 10:10 5 minutes -->
+<!-- These are challenges for folks who want to take React further.  Solutions are available in the solutions branch -->
 
 ### Challenge: Count to 10
 
@@ -578,8 +558,6 @@ const MoodTracker = React.createClass({
 
 -->
 
-<!-- 10:15 5 minutes -->
-
 ## Challenge: I Like!
 
 Let's create a state for our earlier blog example. We want to be able to edit the body of our post. Tip: update the component to the `React.createClass` syntax.
@@ -588,8 +566,6 @@ Let's create a state for our earlier blog example. We want to be able to edit th
 1. Render the number of likes somewhere in your component.
 1. Create a method, `like` that adds 1 to the state's number of `likes`.
 1. Create a button that triggers the above function.
-
-<!-- Checkout the `solution` branch for solutions.-->
 
 <!--10:20 5 minutes -->
 
