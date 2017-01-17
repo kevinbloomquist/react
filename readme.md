@@ -225,7 +225,7 @@ ReactDOM.render(
 ```
 
 <!--11:10 15 minutes -->
-<!-- Turn over to devs -->
+<!-- Turn over to devs after they walk through a general plan of attack -->
 
 ### Challenge: Greet the day!
 
@@ -567,7 +567,7 @@ Let's create a state for our earlier blog example. We want to be able to edit th
 1. Create a method, `like` that adds 1 to the state's number of `likes`.
 1. Create a button that triggers the above function.
 
-<!--10:20 5 minutes -->
+<!--12:25 5 minutes -->
 
 ## What's Next?
 
